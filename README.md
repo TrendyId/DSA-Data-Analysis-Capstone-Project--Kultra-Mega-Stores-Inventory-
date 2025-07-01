@@ -1,16 +1,19 @@
 # DSA-Data-Analysis-Capstone-Project--Kultra-Mega-Stores-Inventory-
 This project involves Exploratory Data  Analysis (EDA) using SQL Server Database to analyze the data set, and provide insights.
 
+
 ## Overview
 
 This project presents an in-depth inventory and customer analysis for Kultra Mega Stores (KMS), leveraging SQL Server to explore sales trends, shipping behavior, customer profitability, and business performance insights. The goal is to aid data-driven decision-making to optimize revenue and operational efficiency.
 
 The dataset was cleaned and structured in SQL Server before performing various business intelligence queries.
 
+
 ## Tools & Technologies
 
 - Microsoft SQL Server
 - T-SQL (Transact-SQL)
+
 
 ## Database
 
@@ -23,7 +26,8 @@ USE Capstone_Project;
 SELECT * FROM [dbo].[KMS Sql Case Study];
 
 ```
- 
+
+ 
 # Key Business Questions & Insights
 
 ## 1. Which Product Category Has the Highest Sales?
@@ -143,6 +147,7 @@ ORDER BY Total_Sales DESC;
 Dennis Kane is the small business customer with the highest sales.
 
 
+
 ## 8. Corporate Customer with Most Orders (2009–2012)
 
 ```SQL
@@ -158,7 +163,8 @@ ORDER BY Order_Count DESC;
 Adam Hart is the corporate customer with the most orders
 
 
-## 9. Most Profitable Consumer Customer
+
+## 9. Which consumer customer was the most profitable one? 
 
 ```SQL
 SELECT TOP 1 Customer_Name, SUM(Profit) AS Total_Profit
@@ -168,10 +174,13 @@ GROUP BY Customer_Name
 ORDER BY Total_Profit DESC;
 ```
 
+![image](https://github.com/user-attachments/assets/037a1475-a131-476b-91b2-7075e855c9ad)
+
+Emily Phan is the most profitable customer.
 
 
 
-## 10. Customers Who Returned Items
+## 10. Which customers returned items, and what segment do they belong to?
 
 ```SQL
 SELECT 
@@ -193,7 +202,8 @@ ORDER BY
 
 
 
-## 11. Shipping Cost vs Order Priority — Was It Justified?
+
+## 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer 
 
 ```SQL
 SELECT 
@@ -221,7 +231,13 @@ ORDER BY
     Order_Priority, Ship_Mode;
 ```
 
-Analysis: If high-cost shipping methods like "Express Air" were used for low-priority orders, this indicates inefficiencies. Match order urgency with shipping mode to control logistics expenses.
+Analysis: If high-cost shipping methods, Express Air were used for low-priority orders, this indicates inefficiencies. My recommendations are:
+- Use Delivery Truck for Low and Medium priority orders.
+- Reserve Express Air for High and Critical priority orders only.
+- Automate the optimal shipping method based on order priority and location.
+- Offer flexible for consumer segments if urgent delivery is requested.
+
+
 
 ## Summary
 This capstone project demonstrates advanced SQL querying techniques to analyze:
