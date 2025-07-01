@@ -36,6 +36,7 @@ WHERE Sales = (SELECT MAX(Sales) FROM [dbo].[KMS Sql Case Study]);
 
 ![image](https://github.com/user-attachments/assets/baa5c14b-0094-467b-8c8a-62868a031651)
 
+Technology product category has the highest sales.
 
 
 ## 2. Top 3 and Bottom 3 Regions by Sales
@@ -50,6 +51,9 @@ ORDER BY TotalSales DESC;
 
 ![image](https://github.com/user-attachments/assets/81d6b4ce-ea6d-4c9d-a9d6-f80e34a61d02)
 
+Foe the top 3 regions, West has total sales of $3597549.41, Ontario has total sales of $3063212.60, and Prairie has total sales of $2837304
+
+
 -- Bottom 3 Regions
 ```SQL
 SELECT TOP 3 Region, SUM(Sales) AS TotalSales
@@ -59,6 +63,8 @@ ORDER BY TotalSales A
 ```
 
 ![image](https://github.com/user-attachments/assets/46eb7cc4-6cc8-4edd-97da-df72de67d428)
+
+For the bottom 3 regions, Nunavut has total sales of $116376.47, Northwest Territories has total sales of $800847.35, and Yukon has total sales of $975867.39
 
 
 ## 3. Total Sales of Appliances in Ontario
@@ -70,6 +76,8 @@ WHERE Region = 'Ontario' AND Product_Category = 'Appliances';
 ```
 
 ![image](https://github.com/user-attachments/assets/d557da9b-a4db-463c-be01-9b6148ca49fd)
+
+The total sales of appliances in Ontario is $3063212.60
 
 
 ## 4. How to Improve Revenue from Bottom 10 Customers
@@ -96,6 +104,8 @@ WHERE Shipping_Cost = (
 ```
 
 ![image](https://github.com/user-attachments/assets/b7994074-1d53-40df-a5b0-b2ae79d18ad5)
+
+Delivery Truck is the shipping method with the highest cost.
 
 
 ## 6. Most Valuable Customers by Sales & Profit
@@ -130,6 +140,8 @@ ORDER BY Total_Sales DESC;
 
 ![image](https://github.com/user-attachments/assets/881fcd7e-3356-4d6a-bbf2-e454c0a6bf95)
 
+Dennis Kane is the small business customer with the highest sales.
+
 
 ## 8. Corporate Customer with Most Orders (2009–2012)
 
@@ -142,6 +154,8 @@ ORDER BY Order_Count DESC;
 ```
 
 ![image](https://github.com/user-attachments/assets/f978aa0b-800b-4a81-8905-e6b79d185d7a)
+
+Adam Hart is the corporate customer with the most orders
 
 
 ## 9. Most Profitable Consumer Customer
